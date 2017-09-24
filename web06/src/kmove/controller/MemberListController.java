@@ -2,9 +2,9 @@ package kmove.controller;
 import java.util.Map;
 import kmove.persistence.MemberDAO;
 @Component("/list.do")
-public class MemberController {
+public class MemberListController implements Controller {
   MemberDAO memberDAO;
-  public MemberController setMemberDAO(MemberDAO memberDAO) {
+  public MemberListController setMemberDAO(MemberDAO memberDAO) {
     this.memberDAO = memberDAO;
     return this;
   }

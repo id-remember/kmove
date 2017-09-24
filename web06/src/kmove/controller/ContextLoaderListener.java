@@ -14,8 +14,7 @@ public class ContextLoaderListener implements ServletContextListener {
   public void contextInitialized(ServletContextEvent event) {
     try {
       ServletContext servletContext = event.getServletContext();
-      String propertiesPath = servletContext.getRealPath(
-          servletContext.getInitParameter("contextConfigLocation"));
+      String propertiesPath = servletContext.getRealPath(servletContext.getInitParameter("contextConfigLocation"));
       applicationContext = new ApplicationContext(propertiesPath);
     } catch(Throwable e) {
       e.printStackTrace();
